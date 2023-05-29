@@ -1,0 +1,138 @@
+/* online font conectivity roboto regular */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swa */
+
+/* offline font conectivity roboto regular */
+
+/* roboto-regular - latin */
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+  :root{
+    --bgorenge: #FF6D60;
+    --font_Roboto: 'Roboto';
+  }
+  .text_org{
+    color: var(--bgorenge) !important;
+  }
+
+  body{
+    font-family: var(--font_Roboto);
+    line-height: 28px;
+    font-size: 14px;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .spacer{
+    padding: 70px 0;
+  }
+  .bgorenge{
+    background-color: var(--bgorenge);
+  }
+
+  /* ====================================================================================================
+                                                Header
+  =======================================================================================================*/
+
+  .btn_them{
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: white;
+  }
+  .btn_them:hover{
+    border: 1px solid var(--bgorenge) !important;
+    color: var(--bgorenge) !important;
+  }
+  .navbar-toggler{
+    border: none !important;
+  }
+  .active{
+    color: var(--bgorenge) !important;
+  }
+  .main_menu li:hover > a,
+  .sub_menu > li:hover a{
+    color: var(--bgorenge) !important;
+  }
+  .main_menu > li{
+    position: relative;
+    /* background-color: aqua; */
+  }
+  .sub_menu{
+    position: absolute;
+    /* background-color: grey; */
+    left: 0;
+    top: 44px;
+    width: 170px;
+    display: none;
+    z-index: 3;
+  }
+  .main_menu li:hover .sub_menu{
+    display: block;
+  }
+  /* =====================================================================================================
+                                          Main
+  ========================================================================================================*/
+/*  Banner section  */
+.banner{
+  background-color: #EDF5F8;
+}
+.banner_curve{
+  background-color: #EDF5F8;
+  position: absolute;
+  bottom: 0;
+  
+  margin: 0 !important;
+}
+
+.banner_sec{
+  padding: 100px 0 !important;
+  background-color: #EDF5F8;
+  position: relative;
+}
+.sec_head{
+  font-size: 60px;
+  font-weight: bold;
+}
+.sub_sec{
+  color: var(--bgorenge);
+}
+.sec_contain{
+  font-size: 18px;
+}
+.features{
+
+  background-color: white;
+}
+.shap-features{
+  z-index: -1 ;
+  position: absolute;
+  top: -21px;
+  left: -36px;
+}
+.navbar-toggler:hover span{
+  border: none !important;
+}
+.services{
+  background-color: #F9F9F9;
+}

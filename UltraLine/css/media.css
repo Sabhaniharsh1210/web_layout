@@ -1,0 +1,19 @@
+@media screen and (max-width:992px){
+    /* .main_menu > li{
+        position: relative;
+        background-color: aqua;
+      } */
+      .sub_menu{
+        position: static;
+        background-color: grey;
+        width: 100%;
+        display: none;
+      }
+      .main_menu li:hover .sub_menu{
+        display: block;
+      }
+      
+}
+@media screen and (min-width:992px){
+
+}

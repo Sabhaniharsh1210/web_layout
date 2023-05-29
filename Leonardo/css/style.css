@@ -1,0 +1,326 @@
+/*-----------------------  online font conectivity  -----------*/
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@500&display=swap'); */
+
+/*------------------------ offline font conectivity ------------------*/
+
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v23-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/lato-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v23-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+
+  /* ubuntu-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/ubuntu-v20-latin-500.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/ubuntu-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/ubuntu-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/ubuntu-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/ubuntu-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/ubuntu-v20-latin-500.svg#Ubuntu') format('svg'); /* Legacy iOS */
+  }
+
+  :root{
+    --bgpink: #c62580;
+    --fontlato: 'Lato', sans-serif;
+    --fontubuntu: 'Ubuntu', sans-serif;
+  }
+  
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Ubuntu', sans-serif; */
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Lato', sans-serif;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .container{
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .spacer{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .justify_center{
+    justify-content: center;
+  }
+  .justify_between{
+    justify-content: space-between;
+  }
+  .align_center{
+    align-items: center;
+  }
+  .bgpink{
+    background-color: var(--bgpink);
+    color: white;
+  }
+  .sec_title{
+    text-align: center;
+  }
+  
+  /* ===============================================
+                    Header
+  =================================================*/
+
+  /* Top Header */
+  .top_header{
+    padding: 10px 0;
+  }
+  .Main_header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .left_add > div{
+    margin-right: 30px;
+ 
+  }
+  .left_add div i{
+    padding-right: 10px;
+  }
+  .social_icon a{
+    color: inherit;
+    margin: 0 5px;
+  }
+  .social_icon a:hover{
+    color: rgb(71, 6, 250);
+  }
+  /* Navigation Header */
+  .main_menu > ul > li{
+    margin-left: 20px;
+  }
+  .main_menu > ul > li > a{
+    letter-spacing: 2px;
+    padding: 33px 10px;
+    color: var(--bgpink);
+  }
+  .nav_header{
+    box-shadow: 0px 0px 3px black;
+    background-color: white;
+  }
+  .main_logo a{
+    color: white;
+    font-size: 25px;
+  }
+  .main_logo{
+    padding: 25px 10px;
+    display: flex;
+    align-self: stretch;
+    background-color: var(--bgpink);
+  }
+
+  .main_menu li{
+    position: relative;
+  }
+  
+  .active a{
+    background-color: var(--bgpink);
+    color: white !important;
+  }
+  .main_menu > ul > li a:hover{
+    background-color: var(--bgpink);
+    color: white;
+  }
+  .sub_menu{
+    display: none;
+    position: absolute;
+    top: 215%;
+    width: 200px;
+  
+  }
+  .sub_menu li a{
+    padding: 10px;
+    color: var(--bgpink  );
+  }
+  .main_menu ul li:hover .sub_menu{
+    display: block;
+  }
+
+  /* ================================================
+                        Main
+  ===================================================*/
+  /* Banner */
+  .banner{
+    position: relative;
+    /* margin-top: 130px; */
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../image/banner.jpeg');
+    background-attachment: fixed;
+  }
+  .banner_hedding{
+    font-family: var(--fontubuntu);
+    font-size: 70px;
+    letter-spacing: 30px;
+    line-height: 151.2px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    bottom: 40%;
+    left: 0px;
+    text-align: center;
+  }
+  .banner::after{
+    content: '';
+    border-right: calc(50vw - 8.5px) solid transparent;
+    border-bottom: 100px solid #FFFFFF;
+    position: absolute;
+    bottom: 0;
+  }
+  .banner::before{
+    content: '';
+    border-left: calc(50vw - 8.5px) solid transparent;
+    border-bottom: 100px solid #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+  /* My Work */
+  .main_head{
+    margin-bottom: 25px;
+    font-size: 42px;
+    letter-spacing: 1px;
+    color: #747474;
+    font-family: var(--fontubuntu);
+  }
+  .sub_head{
+    font-family: var(--fontlato);
+    color: #1a1a1a;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 27px;
+
+  }
+
+  #filter li .bar::after{
+    content: '';
+    width: 3px;
+    height: 25px;
+    background-color: #c62580;
+    position: absolute;
+    transform: skew(-20deg);
+    margin-left: 20px;
+}
+#filter{
+  width: 100%;
+}
+#filter li{
+  margin: 0 20px;
+}
+#filter li:hover{
+  color: var(--bgpink);
+  cursor: default;
+}
+.portfolio{
+  width: 50%;
+  position: relative;
+}
+.icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio a{
+  margin: 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60Px;
+  border-radius: 50%;
+  background-color: var(--bgpink);
+}
+.portfolio_hover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0, 0,0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  padding-top: 40%;
+}
+.portfoliohover{
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-top: 40%;
+  transform: translatey(100px);
+  opacity: 0;
+  
+}
+.portfolio:hover .portfolio_hover{
+  opacity: 1;
+  transition: 0.3S;
+}
+.portfolio:hover .portfoliohover{
+  transition: 1s;
+  transition-delay: 0.5s;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* =====================================================
+                      Footer
+========================================================*/
+
+.coppy_right{
+  background-color: var(--bgpink);
+  padding: 50px 0;
+  text-align: center;
+}
+.footer_design{
+line-height: 0;}
+.footer_design::after{
+  content: '';
+  border-top: 100px solid transparent;
+  border-right: calc(50vw - 8.5px) solid var(--bgpink);
+}
+.footer_design::before{
+  content: '';
+  border-top: 100px solid transparent;
+  border-left: calc(50vw - 8.5px) solid var(--bgpink);
+}
